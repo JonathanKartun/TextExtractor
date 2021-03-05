@@ -22,7 +22,7 @@
                     Margin="5"
                     Clicked="MakeItGrayButtonClicked" />
 
-            <Button Text="Done"
+            <Button Text="Read Image Text"
                     Grid.Row="1"
                     HorizontalOptions="Center"
                     Margin="5"

@@ -27,7 +27,7 @@
               BackgroundColor="Gray"
               Padding="5" />
 
-        <Button Text="Done"
+        <Button Text="Crop Image"
                 Grid.Row="2"
                 HorizontalOptions="Center"
                 Margin="5"

@@ -9,9 +9,8 @@ namespace TextExtractor.Extensions
     {
         public static ImageSource SKImageToImageSource(SKImage image)
         {
-            SKData encoded = SKImageToSKData(image); //image.Encode(); //Slow
-            Stream newStream = encoded.AsStream();
-            return ImageSource.FromStream(() => newStream);
+            Stream stream = SKImageToStream(image);
+            return ImageSource.FromStream(() => stream);
         }
 
         public static SKBitmap SKImageToSKBitmap(SKImage image)
@@ -26,10 +25,8 @@ namespace TextExtractor.Extensions
 
         public static Stream SKImageToStream(SKImage image)
         {
-            using (SKData encoded = image.Encode())
-            {
-                return encoded.AsStream();
-            }
+            SKData encoded = image.Encode();
+            return encoded.AsStream();
         }
 
         public static SKImage SKBitmapToSKImage(SKBitmap bitmap)
@@ -70,6 +67,17 @@ namespace TextExtractor.Extensions
         {
             var image = SKBitmapToSKImage(bitmap);
             return SKImageToBytes(image);
+        }
+
+        public static SKBitmap MemoryStreamToSKBitmap(MemoryStream sourceStream)
+        {
+            using (var memoryStream = new MemoryStream())
+            {
+                sourceStream.CopyTo(memoryStream);
+                memoryStream.Position = 0;
+                sourceStream.Position = 0;
+                return SKBitmap.Decode(memoryStream);
+            }
         }
     }
 }
