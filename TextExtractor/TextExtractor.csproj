@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
+    <PackageReference Include="SkiaSharp.Views.Forms" Version="2.80.2" />
+    <PackageReference Include="Xamarin.Tesseract" Version="0.3.4" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="PhotoCropper\" />
+    <Folder Include="PhotoCropper\TouchTracking\" />
+    <Folder Include="Extensions\" />
+    <Folder Include="Assets\" />
+    <Folder Include="Helpers\" />
+    <Folder Include="Tesseract\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Assets\sa_lottoticket.jpg" />
+    <None Remove="Assets\SwissLotto01.jpg" />
+    <None Remove="Assets\SwissLotto01.1.jpg" />
+    <None Remove="Assets\SwissLotto02.jpg" />
+    <None Remove="Assets\SwissLotto03.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\sa_lottoticket.jpg" />
+    <EmbeddedResource Include="Assets\SwissLotto01.jpg" />
+    <EmbeddedResource Include="Assets\SwissLotto01.1.jpg" />
+    <EmbeddedResource Include="Assets\SwissLotto02.jpg" />
+    <EmbeddedResource Include="Assets\SwissLotto03.jpg" />
+  </ItemGroup>
+</Project>

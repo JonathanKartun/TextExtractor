@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TextExtractor.MainPage"
+             Title="Crop Image"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+             ios:Page.UseSafeArea="true">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="Rotate90" IconImageSource="rotateright" Clicked="Rotate90_Clicked" Text="Rotate 90°" />
+    </ContentPage.ToolbarItems>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <StackLayout Grid.Row="0" Orientation="Horizontal" BackgroundColor="NavajoWhite">
+            <Button x:Name="TakePhotoButton" Text="Take Photo" HorizontalOptions="FillAndExpand" Clicked="TakePhotoButton_Clicked" />
+            <Button x:Name="ChoosePhotoButton" Text="Choose Photo" HorizontalOptions="FillAndExpand" Clicked="ChoosePhotoButton_Clicked" />
+        </StackLayout>
+
+        <Grid x:Name="canvasViewHost"
+              Grid.Row="1"
+              BackgroundColor="Gray"
+              Padding="5" />
+
+        <Button Text="Done"
+                Grid.Row="2"
+                HorizontalOptions="Center"
+                Margin="5"
+                Clicked="OnDoneButtonClicked" />
+    </Grid>
+
+</ContentPage>

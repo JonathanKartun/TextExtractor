@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="TextExtractor.CroppedImagePreviewPage"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Page.UseSafeArea="true"
+             xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
+             Title="Cropped Image"
+             >
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <!--<skia:SKCanvasView x:Name="CroppedImageCanvas" BackgroundColor="YellowGreen" />-->
+        <Image Grid.Row="0" x:Name="ImageView" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+
+        <StackLayout Grid.Row="1" Orientation="Vertical">
+            <Button Text="Make It Gray"
+                    Grid.Row="1"
+                    HorizontalOptions="Center"
+                    Margin="5"
+                    Clicked="MakeItGrayButtonClicked" />
+
+            <Button Text="Done"
+                    Grid.Row="1"
+                    HorizontalOptions="Center"
+                    Margin="5"
+                    Clicked="OnDoneButtonClicked" />
+
+        </StackLayout>
+    </Grid>
+</ContentPage>
