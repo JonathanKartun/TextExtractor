@@ -23,5 +23,5 @@ The basic concept is there and basically works.
 ![Alt text](Screenshots/Andy01.png?raw=true "Android Example1") ![Alt text](Screenshots/Andy02.png?raw=true "Android Example2") ![Alt text](Screenshots/Andy03.png?raw=true "Android Example3")
 
 ## iOS Example
-![Alt text](Screenshots/iOS01.png?raw=true "Android Example1") ![Alt text](Screenshots/iOS02.png?raw=true "Android Example2") ![Alt text](Screenshots/iOS03.png?raw=true "Android Example3")
+![Alt text](Screenshots/iOS01.png?raw=true "iOS Example1") ![Alt text](Screenshots/iOS02.png?raw=true "iOS Example2") ![Alt text](Screenshots/iOS03.png?raw=true "iOS Example3")
 
