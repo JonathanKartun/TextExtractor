@@ -152,6 +152,9 @@ namespace TouchTracking.Droid
                     idToEffectDictionary.Remove(id);
                     break;
             }
+
+            // Let the OS know that we want to receive more touch events [Required for Android] - or only Down is registered.
+            args.Handled = true;
         }
 
         void CheckForBoundaryHop(int id, Point pointerLocation)
